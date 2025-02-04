@@ -1,0 +1,126 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF<!-- index.html -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Fitness Website - User Data Collection</title>
+       <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+       <h1>Fitness Website - User Data Collection</h1>
+       <form action="registermain.php" method="post">
+           <label for="age">Age:</label>
+           <input type="number" id="age" name="age" required><br><br>
+           <label for="height">Height (in cm):</label>
+           <input type="number" id="height" name="height" required><br><br>
+           <label for="weight">Weight (in kg):</label>
+           <input type="number" id="weight" name="weight" required><br><br>
+           <label for="issues">What are your fitness issues or problems?</label>
+           <textarea id="issues" name="issues" required></textarea><br><br>
+           <label for="goals">What health or fitness goals do you want to achieve?</label>
+           <textarea id="goals" name="goals" required></textarea><br><br>
+           <input type="submit" value="Register">
+       </form>
+    </body>
+    </html>-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            const ageInput = document.getElementById('age');
+            const heightInput = document.getElementById('height');
+            const weightInput = document.getElementById('weight');
+            const issuesInput = document.getElementById('issues');
+            const goalsInput = document.getElementById('goals');
+            const submitButton = form.querySelector('input[type="submit"]');
+    
+            // Function to validate input fields
+            function validateInput() {
+                let isValid = true;
+    
+                // Reset feedback messages
+                ageInput.setCustomValidity('');
+                heightInput.setCustomValidity('');
+                weightInput.setCustomValidity('');
+                issuesInput.setCustomValidity('');
+                goalsInput.setCustomValidity('');
+    
+                // Age validation
+                if (ageInput.value <= 0) {
+                    ageInput.setCustomValidity('Please enter a valid age greater than 0.');
+                    isValid = false;
+                }
+    
+                // Height validation
+                if (heightInput.value <= 0) {
+                    heightInput.setCustomValidity('Please enter a valid height greater than 0.');
+                    isValid = false;
+                }
+    
+                // Weight validation
+                if (weightInput.value <= 0) {
+                    weightInput.setCustomValidity('Please enter a valid weight greater than 0.');
+                    isValid = false;
+                }
+    
+                // Issues and Goals validation
+                if (issuesInput.value.trim() === "") {
+                    issuesInput.setCustomValidity('Please describe your fitness issues.');
+                    isValid = false;
+                }
+    
+                if (goalsInput.value.trim() === "") {
+                    goalsInput.setCustomValidity('Please describe your fitness goals.');
+                    isValid = false;
+                }
+    
+                // Update submit button state
+                submitButton.disabled = !isValid;
+            }
+    
+            // Attach input event listeners for real-time validation
+            ageInput.addEventListener('input', validateInput);
+            heightInput.addEventListener('input', validateInput);
+            weightInput.addEventListener('input', validateInput);
+            issuesInput.addEventListener('input', validateInput);
+            goalsInput.addEventListener('input', validateInput);
+    
+            // Final form submission handling
+            form.addEventListener('submit', function(event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault(); // Prevent form submission if not valid
+                    alert("Please correct the highlighted fields before submitting.");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Fitness Website</h1>
+        <form id="user-data-form">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age"><br><br>
+            <label for="height">Height (in cm):</label>
+            <input type="number" id="height" name="height"><br><br>
+            <label for="weight">Weight (in kg):</label>
+            <input type="number" id="weight" name="weight"><br><br>
+            <label for="issues">What are your fitness issues or problems?</label>
+            <textarea id="issues" name="issues"></textarea><br><br>
+            <label for="goals">What health or fitness goals do you want to achieve?</label>
+            <textarea id="goals" name="goals"></textarea><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script src="scriptmain.js"></script>
+</body>
+</html>

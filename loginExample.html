@@ -1,0 +1,29 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Health and Fitness Tips</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Personalized Health and Fitness Tips</h1>
+    <form id="survey-form">
+        <label for="fitness-goal">What is your fitness goal?</label>
+        <select id="fitness-goal" name="fitness-goal">
+            <option value="weight-loss">Weight Loss</option>
+            <option value="muscle-gain">Muscle Gain</option>
+            <option value="endurance">Endurance</option>
+        </select>
+        <label for="workout-routine">What is your current workout routine?</label>
+        <textarea id="workout-routine" name="workout-routine"></textarea>
+        <label for="health-metrics">What are your current health metrics?</label>
+        <input type="number" id="health-metrics" name="health-metrics">
+        <button type="submit">Submit</button>
+    </form>
+    <div id="tips-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

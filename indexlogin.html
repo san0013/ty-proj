@@ -1,0 +1,38 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Fitness Website</title>
+    <link rel="stylesheet" href="styleslogin.css">
+    
+</head>
+<form id="registration-form" action="db1.php" method="POST"></form>
+<body>
+    <h1>Personalized Fitness Website</h1>
+    <form id="registration-form">
+        <label for="height">Height:</label>
+        <input type="number" id="height" name="height"><br><br>
+        <label for="weight">Weight:</label>
+        <input type="number" id="weight" name="weight"><br><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age"><br><br>
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br><br>
+        <label for="health-issues">Health Issues:</label>
+        <textarea id="health-issues" name="health-issues"></textarea><br><br>
+        <label for="fitness-goals">Fitness Goals:</label>
+        <textarea id="fitness-goals" name="fitness-goals"></textarea><br><br>
+        <label for="dietary-preferences">Dietary Preferences:</label>
+        <textarea id="dietary-preferences" name="dietary-preferences"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script src="scriptlogin.js"></script>
+</body>
+</html>

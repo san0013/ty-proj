@@ -1,0 +1,21 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.section {
+    background-color: #0e0d0d;
+    border: 1px solid #09f0c2;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    text-decoration: none; /* Remove underline from links */
+    color: #333;
+}
+
+.section-title:hover {
+    color: #007BFF; /* Change color on hover */
+}
